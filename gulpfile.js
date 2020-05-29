@@ -51,7 +51,7 @@ async function js(cb){
 }
 
 function watcher(cb) {
-  watch(`${origin}/**/*.html`).on('change', series(html, browserSync.reload))
+  watch(`${origin}/index.html`).on('change', series(html, browserSync.reload))
   watch(`${origin}/**/*.sass`).on('change', series(styles, browserSync.reload))
   watch(`${origin}/**/*.js`).on('change', series(js, browserSync.reload))
   cb();
