@@ -51,15 +51,15 @@ async function js(cb){
 }
 
 function watcher(cb) {
-  watch(`${origin}/index.html`).on('change', series(html, browserSync.reload))
-  watch(`${origin}/**/*.sass`).on('change', series(styles, browserSync.reload))
-  watch(`${origin}/**/*.js`).on('change', series(js, browserSync.reload))
+  watch(`${origin}/**/*.pug`).on('change', series(html, browserSync.reload))
+  watch(`${origin}/sass/**/*.sass`).on('change', series(styles, browserSync.reload))
+  watch(`${origin}/js/*.js`).on('change', series(js, browserSync.reload))
   cb();
 }
 
 function server(cb){
     browserSync.init({
-        notify: false,
+        notify: true,
         open: true,
         server: {
             baseDir: destination
