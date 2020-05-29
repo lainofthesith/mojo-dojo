@@ -1,13 +1,13 @@
-const {src, dest, series, parallel, watch} = require('gulp');
-const del = require('del');
-const browserSync = require('browser-sync').create();
-const babel = require('gulp-babel');
-const concat = require('gulp-concat');
-const sass = require('gulp-sass');
-const pug = require('gulp-pug');
-
-const origin = 'src';
-const destination = 'build';
+const {src, dest, series, parallel, watch} = require('gulp'),
+    del = require('del'),
+    browserSync = require('browser-sync').create(),
+    babel = require('gulp-babel'),
+    concat = require('gulp-concat'),
+    sass = require('gulp-sass'),
+    sourcemaps = require('gulp-sourcemaps'),
+    pug = require('gulp-pug'),
+    origin = 'src',
+    destination = 'build';
 
  //sets the compiler - forward compatibility
 sass.compiler = require('node-sass');
@@ -25,15 +25,18 @@ async function html(cb){
     .pipe(dest(destination));
 }
 
-async function css(cb){
+async function styles(cb){
     await src(`${origin}/css/animate.css`).pipe(dest(`${destination}/css`));
-    src(`${origin}/css/style.sass`)
-    .pipe(sass({
+    src(`${origin}/sass/style.sass`)
+    .pipe(sourcemaps.init())
+    .pipe(
+        sass({
+        sourcemap: true,
         outputStyle: 'compressed'
-    }))
-    .pipe(dest(`${destination}/css`));
+        }).on('error', sass.logError)
+        )
+        .pipe(dest(`${destination}/css`));
 }
-
 
 async function js(cb){
     await src(`${origin}/js/lib/**/*.js`).pipe(dest(`${destination}/js/lib`));
@@ -49,7 +52,7 @@ async function js(cb){
 
 function watcher(cb) {
   watch(`${origin}/**/*.html`).on('change', series(html, browserSync.reload))
-  watch(`${origin}/**/*.sass`).on('change', series(css, browserSync.reload))
+  watch(`${origin}/**/*.sass`).on('change', series(styles, browserSync.reload))
   watch(`${origin}/**/*.js`).on('change', series(js, browserSync.reload))
   cb();
 }
@@ -65,4 +68,4 @@ function server(cb){
     cb();
 }
 
-exports.default = series(clean, parallel(html, css, js), server, watcher);
+exports.default = series(clean, parallel(html, styles, js), server, watcher);
