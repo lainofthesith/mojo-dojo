@@ -1,20 +1,21 @@
 # Starter Pack for Web Projects
 
-
-## Branches
-
-
+This branch is a starter pack with pug, sass, Boostrap 4 and browser-sync with Gulp 4 as a task runner.
 
 ## Installing
 
-1. To use these files, you must have the following installed:
+1. Make sure you have these installed
+	- [node.js](http://nodejs.org/)
+	- [git](http://git-scm.com/)
+2. Clone this repository into your local machine using the terminal (mac) or Gitbash (PC) `> git clone CLONEURL`
+3. CD to the folder `cd FOLDERNAME`
+4. Run `> npm install` to install the project dependencies
+5. Run `> gulp` to start live preview server
 
-   - node.js
-   - git
-
-2. Clone this repository into your local machine using the terminal (Mac), CMD (Windows), or a GUI tool like SourceTree.
 
 ## Attributions:
+
+The base html & css was written by Ray Villaoobos and converted to pug & sass respectively for this project. You can find him on [LinkedIn](https://www.linkedin.com/in/planetoftheweb/), read [his blog](http://raybo.org), [follow him on twitter](http://twitter.com/planetoftheweb), or check out his [youtube channel](http://youtube.com/planetoftheweb).
 
 ## NOTICE:
 
