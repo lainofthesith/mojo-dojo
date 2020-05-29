@@ -1,0 +1,263 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width,initial-scale=1,shrink-to-fit=no')
+    script(defer src='js/lib/fontawesome-all.min.js')
+    link(rel='stylesheet' href='css/bootstrap.min.css')
+    link(rel='stylesheet' href='css/animate.css')
+    link(rel='stylesheet' href='css/style.css')
+    title Bootstrap 4 Layouts
+  body(data-spy='scroll' data-target='.site-nav' data-offset='55')
+    header#page-hero.site-header.d-flex.flex-column.align-content-between
+      nav.site-nav.family-sans.navbar.navbar-expand-md.navbar-dark.fixed-top
+        .container-fluid
+          button.navbar-toggler(type='button' data-toggle='collapse' data-target='#myTogglerNav' aria-controls='myTogglerNav' aria-label='Toggle Navigation')
+            span.navbar-toggler-icon
+          a.navbar-brand.text-uppercase(href='#page-hero')
+            i.fas.fa-cube.mr-2
+            |  Layout Components
+          .collapse.navbar-collapse#myTogglerNav
+            .navbar-nav.ml-auto.font-weight-regular.text-uppercase
+              a.nav-item.nav-link(href='#page-hero') home
+              a.nav-item.nav-link(href='#page-multicolumn') columns
+              a.nav-item.nav-link(href='#page-media') media
+              a.nav-item.nav-link(href='#page-photogrid') grid
+              a.nav-item.nav-link(href='#page-carousel') carousel
+              a.nav-item.nav-link(href='#page-nested') nested
+              a.nav-item.nav-link(href='#page-icons') icons
+              a.nav-item.nav-link(href='#page-floater') floater
+              a.nav-item.nav-link(href='#page-cards') cards
+      section.layout-hero.jumbotron.jumbotron-fluid.d-flex.align-items-center.mt-5.text-reverse
+        .container.text-center
+          .row.justify-content-center
+            .col-11.col-sm-10.col-md-8.animated.fadeInUp
+              h3.page-section-title.text-reverse raybo.org/bootstrap4layouts
+              p.page-section-text.lead Learn to build practical Bootstrap 4 layouts using the grid, flex classes and utlity classes with these sample layout components. Each component is wrapped in an individual section class so you can copy, paste and customize them into your own layouts.
+              a.btn.btn-outline-light(href='https://github.com/planetoftheweb/bootstrap4layouts') Github Repo
+    article#page-multicolumn.page-section.vertical-padding
+      header.page-section-header.container
+        h2.page-section-title.display-4.pt-4.text-center Multi-column
+        p.page-section-text.lead.mx-md-5
+          | This layout uses multiple column rules so that how many columns each group takes depends on the width of the browser, by also using the
+
+          code justify-content-center
+          |  class on the row, using less than 12 columns results in a centered set of columns. The rules used are
+
+          code col-10
+          code col-md-6
+          code col-lg-4
+          code col-xl-3
+          | .
+      section.layout-multicolumn.container.family-sans.text-uppercase.text-center.py-4
+        .row.justify-content-center.py-2
+          section.photo-modal.mb-5.col-10.col-md-6.col-lg-4.col-xl-3
+            a(data-toggle='modal' data-target='#site-modal' data-highres='https://dummyimage.com/16:9x1600/A.png&text=+' href='#')
+              img.layout-image.img-fluid.rounded(src='https://dummyimage.com/16:9x400/6.png&text=+' alt='sample image')
+            h5.layout-title.mt-1 Text Heading
+          section.photo-modal.text-center.mb-5.col-10.col-md-6.col-lg-4.col-xl-3
+            a(data-toggle='modal' data-target='#site-modal' data-highres='https://dummyimage.com/16:9x1600/A.png&text=+' href='#')
+              img.layout-image.img-fluid.rounded(src='https://dummyimage.com/16:9x400/6.png&text=+' alt='sample image')
+            h5.layout-title.mt-1 Text Heading
+          section.photo-modal.text-center.mb-5.col-10.col-md-6.col-lg-4.col-xl-3
+            a(data-toggle='modal' data-target='#site-modal' data-highres='https://dummyimage.com/16:9x1600/A.png&text=+' href='#')
+              img.layout-image.img-fluid.rounded(src='https://dummyimage.com/16:9x400/6.png&text=+' alt='sample image')
+            h5.layout-title.mt-1 Text Heading
+          section.photo-modal.text-center.mb-5.col-10.col-md-6.col-lg-4.col-xl-3
+            a(data-toggle='modal' data-target='#site-modal' data-highres='https://dummyimage.com/16:9x1600/A.png&text=+' href='#')
+              img.layout-image.img-fluid.rounded(src='https://dummyimage.com/16:9x400/6.png&text=+' alt='sample image')
+            h5.layout-title.mt-1 Text Heading
+          section.photo-modal.text-center.mb-5.col-10.col-md-6.col-lg-4.col-xl-3
+            a(data-toggle='modal' data-target='#site-modal' data-highres='https://dummyimage.com/16:9x1600/A.png&text=+' href='#')
+              img.layout-image.img-fluid.rounded(src='https://dummyimage.com/16:9x400/6.png&text=+' alt='sample image')
+            h5.layout-title.mt-1 Text Heading
+          section.photo-modal.text-center.mb-5.col-10.col-md-6.col-lg-4.col-xl-3
+            a(data-toggle='modal' data-target='#site-modal' data-highres='https://dummyimage.com/16:9x1600/A.png&text=+' href='#')
+              img.layout-image.img-fluid.rounded(src='https://dummyimage.com/16:9x400/6.png&text=+' alt='sample image')
+            h5.layout-title.mt-1 Text Heading
+          section.photo-modal.text-center.mb-5.col-10.col-md-6.col-lg-4.col-xl-3
+            a(data-toggle='modal' data-target='#site-modal' data-highres='https://dummyimage.com/16:9x1600/A.png&text=+' href='#')
+              img.layout-image.img-fluid.rounded(src='https://dummyimage.com/16:9x400/6.png&text=+' alt='sample image')
+            h5.layout-title.mt-1 Text Heading
+          section.photo-modal.text-center.mb-5.col-10.col-md-6.col-lg-4.col-xl-3
+            a(data-toggle='modal' data-target='#site-modal' data-highres='https://dummyimage.com/16:9x1600/A.png&text=+' href='#')
+              img.layout-image.img-fluid.rounded(src='https://dummyimage.com/16:9x400/6.png&text=+' alt='sample image')
+            h5.layout-title.mt-1 Text Heading
+          section.photo-modal.text-center.mb-5.col-10.col-md-6.col-lg-4.col-xl-3
+            a(data-toggle='modal' data-target='#site-modal' data-highres='https://dummyimage.com/16:9x1600/A.png&text=+' href='#')
+              img.layout-image.img-fluid.rounded(src='https://dummyimage.com/16:9x400/6.png&text=+' alt='sample image')
+            h5.layout-title.mt-1 Text Heading
+          section.photo-modal.text-center.mb-5.col-10.col-md-6.col-lg-4.col-xl-3
+            a(data-toggle='modal' data-target='#site-modal' data-highres='https://dummyimage.com/16:9x1600/A.png&text=+' href='#')
+              img.layout-image.img-fluid.rounded(src='https://dummyimage.com/16:9x400/6.png&text=+' alt='sample image')
+            h5.layout-title.mt-1 Text Heading
+          section.photo-modal.text-center.mb-5.col-10.col-md-6.col-lg-4.col-xl-3
+            a(data-toggle='modal' data-target='#site-modal' data-highres='https://dummyimage.com/16:9x1600/A.png&text=+' href='#')
+              img.layout-image.img-fluid.rounded(src='https://dummyimage.com/16:9x400/6.png&text=+' alt='sample image')
+            h5.layout-title.mt-1 Text Heading
+          section.photo-modal.text-center.mb-5.col-10.col-md-6.col-lg-4.col-xl-3
+            a(data-toggle='modal' data-target='#site-modal' data-highres='https://dummyimage.com/16:9x1600/A.png&text=+' href='#')
+              img.layout-image.img-fluid.rounded(src='https://dummyimage.com/16:9x400/6.png&text=+' alt='sample image')
+            h5.layout-title.mt-1 Text Heading
+    article#page-media.page-section.vertical-padding
+      header.page-section-header.container.text-center
+        h2.page-section-title.display-4.pt-4.text-center Media
+        p.page-section-text.lead.mx-md-5 A quick way two column pattern that shows an image next to a photo. In bootstrap 4, you gain the ability to center elements using flexbox classes. A couple of things to watch out for is that these will always render as single columns and can sometimes be too wide, so these particular media elements are inside an 8 column grid.
+      section.layout-media.container.my-5
+        .row.justify-content-md-center
+          .animated-group.col-lg-8.invisible
+            section.media.mb-4
+              img.layout-image.align-self-center.mr-3.img-fluid.rounded(src='https://dummyimage.com/80/6.png&text=+' alt='Photo Sample')
+              .media-body
+                h4.layout-title Media One
+                p.layout-text Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum at voluptatibus incidunt, quia sapiente sequi quis quae atque quas id quam ab nobis iste eius, accusamus et officia laudantium! Ducimus.
+            section.media.mb-4
+              img.layout-image.align-self-center.mr-3.img-fluid.rounded(src='https://dummyimage.com/80/6.png&text=+' alt='Photo Sample')
+              .media-body
+                h4.layout-title Media Two
+                p.layout-text Possimus beatae magnam illum necessitatibus laudantium illo aspernatur ducimus eveniet? Voluptas labore similique aut quam quibusdam eius voluptatum dolores quas molestiae suscipit numquam veniam, nemo totam incidunt ullam pariatur perspiciatis.
+            section.media.mb-4
+              img.layout-image.align-self-center.mr-3.img-fluid.rounded(src='https://dummyimage.com/80/6.png&text=+' alt='Photo Sample')
+              .media-body
+                h4.layout-title Media Three
+                p.layout-text Quis at impedit repellat ipsam ad reiciendis beatae odio explicabo amet fuga nostrum animi nisi unde ab sint, sequi est officia. Maiores, fuga aliquid pariatur dignissimos eum vitae ex suscipit.
+    article#page-photogrid.page-section
+      header.page-section-header.text-center.container
+        h2.page-section-title.display-4.pt-4 Photo Grid
+        p.page-section-text.lead.mx-md-5 A photo grid creates an edge to edge layout with a grid of photos.
+      section.layout-photogrid
+        .row.justify-content-center.no-gutters
+          section.photo-modal.text-center.col-12.col-sm-6.col-md-4.col-lg-3
+            img.layout-image.img-fluid(src='https://dummyimage.com/16:9x600/6/C.png&text=01' alt='sample image')
+          section.photo-modal.text-center.col-12.col-sm-6.col-md-4.col-lg-3
+            img.layout-image.img-fluid(src='https://dummyimage.com/16:9x600/6/C.png&text=02' alt='sample image')
+          section.photo-modal.text-center.col-12.col-sm-6.col-md-4.col-lg-3
+            img.layout-image.img-fluid(src='https://dummyimage.com/16:9x600/6/C.png&text=03' alt='sample image')
+          section.photo-modal.text-center.col-12.col-sm-6.col-md-4.col-lg-3
+            img.layout-image.img-fluid(src='https://dummyimage.com/16:9x600/6/C.png&text=04' alt='sample image')
+          section.photo-modal.text-center.col-12.col-sm-6.col-md-4.col-lg-3
+            img.layout-image.img-fluid(src='https://dummyimage.com/16:9x600/6/C.png&text=05' alt='sample image')
+          section.photo-modal.text-center.col-12.col-sm-6.col-md-4.col-lg-3
+            img.layout-image.img-fluid(src='https://dummyimage.com/16:9x600/6/C.png&text=06' alt='sample image')
+          section.photo-modal.text-center.col-12.col-sm-6.col-md-4.col-lg-3
+            img.layout-image.img-fluid(src='https://dummyimage.com/16:9x600/6/C.png&text=07' alt='sample image')
+          section.photo-modal.text-center.col-12.col-sm-6.col-md-4.col-lg-3
+            img.layout-image.img-fluid(src='https://dummyimage.com/16:9x600/6/C.png&text=08' alt='sample image')
+          section.photo-modal.text-center.col-12.col-sm-6.col-md-4.col-lg-3
+            img.layout-image.img-fluid(src='https://dummyimage.com/16:9x600/6/C.png&text=09' alt='sample image')
+          section.photo-modal.text-center.col-12.col-sm-6.col-md-4.col-lg-3
+            img.layout-image.img-fluid(src='https://dummyimage.com/16:9x600/6/C.png&text=10' alt='sample image')
+          section.photo-modal.text-center.col-12.col-sm-6.col-md-4.col-lg-3
+            img.layout-image.img-fluid(src='https://dummyimage.com/16:9x600/6/C.png&text=11' alt='sample image')
+          section.photo-modal.text-center.col-12.col-sm-6.col-md-4.col-lg-3
+            img.layout-image.img-fluid(src='https://dummyimage.com/16:9x600/6/C.png&text=12' alt='sample image')
+    article#page-carousel.page-section
+      section#layout-carousel.layout-carousel.carousel.slide(data-ride='carousel')
+        .carousel-inner
+          ol.carousel-indicators
+            li(data-target='#layout-carousel' data-slide-to='0')
+            li.active(data-target='#layout-carousel' data-slide-to='1')
+            li(data-target='#layout-carousel' data-slide-to='2')
+          .carousel-item.active
+            img.img-fluid(src='https://dummyimage.com/16:9x1600/A/B.png&text=one' alt='Photo Sample')
+          .carousel-item
+            img.img-fluid(src='https://dummyimage.com/16:9x1600/B/C.png&text=two' alt='Photo Sample')
+          .carousel-item
+            img.img-fluid(src='https://dummyimage.com/16:9x1600/D/E.png&text=three' alt='Photo Sample')
+          a.carousel-control-prev(href='#layout-carousel' role='button' data-slide='prev')
+            span.carousel-control-prev-icon(aria-hidden='true')
+              span.sr-only Previous
+          a.carousel-control-next(href='#layout-carousel' role='button' data-slide='next')
+            span.carousel-control-next-icon(aria-hidden='true')
+              span.sr-only Previous
+    article#page-nested.page-section.text-reverse
+      section.layout-nested.container-fluid.vertical-padding
+        .row.align-items-center.justify-content-center
+          section.col-sm-9.col-md-5.col-lg-12.text-center.text-lg-left
+            .row.align-items-center.justify-content-center
+              .col-lg-2.text-lg-right
+                img.layout-image.img-circle.img-fluid.rounded-circle.py-3(src='https://dummyimage.com/200/9.png&text=+' alt='Photo placeholder')
+              .col-lg-6
+                h2.layout-title.pt-3 Nested
+                p.layout-text Fuga possimus aliquam repudiandae, aspernatur quam velit cupiditate nihil beatae eum ipsa consequuntur itaque doloremque! Consequatur consequuntur nesciunt perferendis in illum excepturi nisi, eius totam ducimus nemo. Libero, accusantium tempore?
+          section.col-sm-9.col-md-5.col-lg-12.text-center.text-lg-left
+            .row.align-items-center.justify-content-center
+              .col-lg-2.text-lg-right
+                img.layout-image.img-circle.img-fluid.rounded-circle(src='https://dummyimage.com/200/9.png&text=+' alt='Photo placeholder')
+              .col-lg-6
+                h2.layout-title.pt-3 Nested
+                p.layout-text Fuga possimus aliquam repudiandae, aspernatur quam velit cupiditate nihil beatae eum ipsa consequuntur itaque doloremque! Consequatur consequuntur nesciunt perferendis in illum excepturi nisi, eius totam ducimus nemo. Libero, accusantium tempore?
+    article#page-icons.page-section
+      .layout-iconcolumns.container.py-5
+        .row.text-center
+          section.col-md-4.my-3
+            .icon.layout-icon
+              i.fas.fa-anchor
+            h3.layout-title Icon One
+            p.layout-text Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis doloremque possimus dignissimos illo praesentium id consectetur tempora dolorum! Vel sapiente vitae, deserunt minima et rem accusamus?
+          section.col-md-4.my-3
+            .icon.layout-icon
+              i.fas.fa-bed
+            h3.layout-title Icon Two
+            p.layout-text Dolorem repudiandae ipsa fugit distinctio modi earum dicta eum tenetur, vel temporibus laudantium totam libero odit ex labore commodi maiores molestias. Quo, hic maxime. Accusantium impedit dolorem cum error?
+          section.col-md-4.my-3
+            .icon.layout-icon
+              i.fas.fa-beer
+            h3.layout-title Icon Three
+            p.layout-text Et, alias asperiores? Repellat repudiandae, eum temporibus quibusdam iure, recusandae illo nesciunt, doloremque eligendi maiores tempora eos aliquid minus iusto ipsum facere. Minus, vitae autem dolores vero dolore?
+    article#page-floater.page-section.vertical-padding
+      section.layout-floater.container.text-reverse
+        .row.align-items-center.justify-content-center
+          .col-8.col-md-4.img-container
+            img.layout-image.img-fluid(src='http://planetoftheweb.com/i/phone.svg' alt='Photo Sample')
+          .col-10.col-md-6.align-self-center
+            .my-5.text-center.text-md-left.pl-md-5
+              h2.layout-title Floater Title
+              p.layout-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis fuga ex delectus sunt natus doloremque praesentium aspernatur, totam tempora officia, sed fugit? Libero voluptatem nulla mollitia, amet dolor iste magni.
+    article#page-cards.page-section
+      section.layout-cards.container
+        .row.justify-content-center
+          .col-8.col-sm-12.col-lg-10
+            .card-deck
+              section.card.my-3
+                img.layout-image.card-img-top.img-fluid(src='https://dummyimage.com/16:9x400/6.png&text=+' alt='Photo Sample')
+                .card-body
+                  h4.layout-title.card-title Card Title
+                  p.layout-text.card-text Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint dolorem dolores consequatur ducimus nisi quos saepe error quo praesentium, recusandae aliquam repudiandae.
+              section.card.my-3
+                img.layout-image.card-img-top.img-fluid(src='https://dummyimage.com/16:9x400/6.png&text=+' alt='Photo Sample')
+                .card-body
+                  h4.layout-title.card-title Card Title
+                  p.layout-text.card-text.
+                    Impedit autem ea delectus repudiandae iste commodi a natus aspernatur culpa accusantium, hic, ullam molestiae ratione perspiciatis sit?
+                    
+              section.card.my-3
+                img.layout-image.card-img-top.img-fluid(src='https://dummyimage.com/16:9x400/6.png&text=+' alt='Photo Sample')
+                .card-body
+                  h4.layout-title.card-title Card Title
+                  p.layout-text.card-text Magnam dolorem consectetur, soluta omnis quis eveniet dignissimos dolores mollitia sunt praesentium quo fugiat? Eius ab in mollitia minus ad quisquam eum!
+    footer.site-footer.bg-reverse
+      .layout-social.container.py-5.d-flex.justify-content-center
+        a.text-reverse.px-2(href='https://twitter.com/planetoftheweb')
+          i.fab.fa-twitter
+        a.text-reverse.px-2(href='https://facebook.com/viewsource')
+          i.fab.fa-facebook
+        a.text-reverse.px-2(href='https://linkedin.com/in/planetoftheweb')
+          i.fab.fa-linkedin
+        a.text-reverse.px-2(href='https://github.com/planetoftheweb')
+          i.fab.fa-github
+        a.text-reverse.px-2(href='https://plus.google.com/+RayVillalobos0')
+          i.fab.fa-google-plus
+        a.text-reverse.px-2(href='https://dribbble.com/planetoftheweb')
+          i.fab.fa-dribbble
+        a.text-reverse.px-2(href='https://www.flickr.com/photos/planetoftheweb/sets/72157602932636630/')
+          i.fab.fa-flickr
+        a.text-reverse.px-2(href='https://www.youtube.com/user/planetoftheweb')
+          i.fab.fa-youtube
+    article#site-modal.modal.fade
+      .modal-dialog.modal-lg
+        .modal-content
+          img.img-fluid(data-dismiss='modal' src='#' alt='Modal Photo')
+    script(src='js/lib/jquery.min.js')
+    script(src='js/lib/bootstrap.bundle.min.js')
+    script(src='js/script.js')
