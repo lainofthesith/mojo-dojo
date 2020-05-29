@@ -1,0 +1,32 @@
+{
+  "name": "webpack-basic",
+  "version": "1.0.0",
+  "description": "Starter pack in webpack4",
+  "main": "index.js",
+  "devDependencies": {
+    "jquery": "^3.5.1",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lainofthesith/mojo-dojo.git"
+  },
+  "keywords": [
+    "webpack",
+    "preprocessing",
+    "react"
+  ],
+  "author": "Damita Salmon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lainofthesith/mojo-dojo/issues"
+  },
+  "homepage": "https://github.com/lainofthesith/mojo-dojo#readme",
+  "dependencies": {
+    "lodash": "^4.17.15"
+  }
+}
