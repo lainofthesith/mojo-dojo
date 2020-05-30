@@ -1,5 +1,7 @@
 const path = require("path");
+const HTMLWebpackPlugin = require("html-webpack-plugin");
 
+/* code splitting option remove if unused
 module.exports = {
     entry: {
         about: './src/about.js',
@@ -9,11 +11,22 @@ module.exports = {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist')
     },
-    optimization: {
+
+    */
+
+
+module.exports = {
+    entry:  './src/index.js',
+    output: {
+        filename: 'main.js',
+        path: path.resolve(__dirname, 'dist')
+    },
+ /*   optimization: {
         splitChunks: {
             chunks: 'all'
         }
-    },
+    },*/
+    plugins: [new HTMLWebpackPlugin()],
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
         port: 9000
