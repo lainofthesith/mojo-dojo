@@ -1,5 +1,7 @@
 const path = require("path");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+
 
 /* code splitting option remove if unused
 module.exports = {
@@ -21,11 +23,13 @@ module.exports = {
         filename: 'main.js',
         path: path.resolve(__dirname, 'dist')
     },
- /*   optimization: {
-        splitChunks: {
+  optimization: {
+      //code splitting option
+        /*splitChunks: {
             chunks: 'all'
-        }
-    },*/
+        },*/
+        minimizer: [new UglifyJsPlugin()]
+    },
     plugins: [new HTMLWebpackPlugin()],
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
