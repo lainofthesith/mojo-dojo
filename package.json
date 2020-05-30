@@ -14,10 +14,12 @@
     "react-dom": "^16.13.1",
     "style-loader": "^1.2.1",
     "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11"
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
   },
   "scripts": {
-    "build": "webpack -w"
+    "build": "webpack -w",
+    "start:dev": "./node_modules/.bin/webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -35,6 +37,7 @@
   },
   "homepage": "https://github.com/lainofthesith/mojo-dojo#readme",
   "dependencies": {
-    "lodash": "^4.17.15"
+    "lodash": "^4.17.15",
+    "url-loader": "^4.1.0"
   }
 }
